@@ -62,12 +62,14 @@
         <a onclick="liveWeather()" class="button">See Live Weather</a>
         <img src="travel.jpg" alt="Image 2" class="icon">
         <a href="#" class="button">Want to know More</a>
+
     </div>
     <div id="animation-bottom"></div>
 </body>
 
 <script>
     // console.log(window.location.href);
+
     function liveWeather() {
         var modifiedString = window.location.href.replace(/.*=/, '')
         window.open(`https://kyloren010.github.io/world-clock/Weather.html?country=${modifiedString}`)

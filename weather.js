@@ -6,7 +6,7 @@
     var string = window.location.href;
     var isMatch = pattern.test(string);
 
-    if (isMatch) inputF.value = string.replace(pattern, "");
+    if (isMatch) inputF.value = string.replace(pattern, "").replace(/%\d*/g, ' ');
 
     fetch("data.csv")
         .then((response) => response.text())
@@ -37,7 +37,7 @@
         const response = await fetch(api_url);
         const data = await response.json();
 
-        const country = document.getElementById("countryInput").value;
+        const country = document.getElementById("countryInput").value.replace(/%\d*/g, ' ');
         var lat = countries[country].latitude;
         var lon = countries[country].longitude;
 
@@ -96,7 +96,7 @@
     }
 
     function fetchWeather() {
-        const country = document.getElementById("countryInput").value;
+        const country = document.getElementById("countryInput").value.replace(/%\d*/g, ' ');
         console.log(country);
         var lat = countries[country].latitude;
         var lon = countries[country].longitude;
