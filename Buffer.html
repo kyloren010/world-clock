@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>More Options</title>
+    <style>
+        body {
+            background-image: url('bg2ndpage.jpg');
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-position: center;
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+        
+        #container {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+            color: #fff;
+            text-align: center;
+        }
+        
+        h1 {
+            font-size: 3rem;
+            margin-bottom: 1.5rem;
+        }
+        
+        .button {
+            display: inline-block;
+            padding: 1rem 2rem;
+            background-color: #4CAF50;
+            color: #fff;
+            font-size: 1.5rem;
+            text-decoration: none;
+            border-radius: 5px;
+            margin: 0.5rem;
+            transition: background-color 0.3s ease;
+            cursor: pointer;
+        }
+        
+        .button:hover {
+            background-color: #45a049;
+        }
+        
+        .icon {
+            width: 50px;
+            height: 50px;
+            margin: 1rem;
+        }
+        
+        
+    </style>
+</head>
+<body>
+    <div id="animation-top"></div>
+    <div id="container">
+        <h1>More Options</h1>
+        <img src="weather.jpg" alt="Image 1" class="icon">
+        <a onclick="liveWeather()" class="button">See Live Weather</a>
+        <img src="travel.jpg" alt="Image 2" class="icon">
+        <a href="#" class="button">Want to know More</a>
+        
+    </div>
+    <div id="animation-bottom"></div>
+</body>
+
+<script>
+    // console.log(window.location.href);
+
+    function liveWeather() {
+        var modifiedString = window.location.href.replace(/.*=/, '')
+        window.open(`http://127.0.0.1:5500/Weather.html?country=${modifiedString}`)
+    }
+</script>
+
+</html>
