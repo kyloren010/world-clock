@@ -1,0 +1,58 @@
+.c-item {
+  height: 720px;
+}
+
+.c-img {
+  height: 100%;
+  object-fit: cover;
+  filter: brightness(0.6);
+}
+
+body {
+  background-color: #0a0f1a;
+}
+
+#go-back-button {
+  /* position: absolute; */
+  top: 10px;
+  left: 10px;
+  display: flex;
+  align-items: center;
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+  color: #fff;
+  font-size: 1rem;
+  text-decoration: none;
+}
+
+#go-back-button img {
+  width: 20px;
+  height: 20px;
+  margin-right: 5px;
+}
+
+.fixed-btn {
+  position: fixed;
+  bottom: 10%;
+  right: 3%;
+  background: #0facf3;
+  width: 180px;
+  height: 45px;
+  line-height: 45px;
+  text-align: center;
+  border-radius: 3px;
+  box-shadow: 4px 4px 4px #0a78aa;
+  cursor: pointer;
+}
+
+.fixed-btn p {
+  text-transform: uppercase;
+  font-family: arial;
+  font-weight: 900;
+  color: #fff;
+}
+
+.fixed-btn:active {
+  box-shadow: 0 0;
+}

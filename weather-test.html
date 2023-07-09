@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Weather</title>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <style>
+      html,
+      body {
+        height: 100%;
+        margin: 0;
+        font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+      }
+
+      body {
+        background-image: url("vidar-nordli-mathisen-Vl5Awbq9jx0-unsplash.jpg");
+        background-size: cover;
+        background-repeat: no-repeat;
+      }
+
+      .container {
+        display: flex;
+        height: 100%;
+      }
+
+      .div1,
+      .div2 {
+        flex: 1;
+        margin: 10px;
+        color: antiquewhite;
+      }
+
+      .div1 {
+        display: flex;
+        margin-right: 5px;
+        align-items: center;
+        height: 97vh;
+        flex-direction: column;
+      }
+
+      .div2 {
+        display: flex;
+        margin-left: 5px;
+        justify-content: center;
+        align-items: center;
+        height: 97vh;
+        background-color: rgba(255, 255, 255, 0.4);
+      }
+
+      p#info {
+        font-size: large;
+      }
+
+      .fixed-btn {
+        position: fixed;
+        bottom: 10%;
+        right: 3%;
+        background: #0facf3;
+        width: 180px;
+        height: 45px;
+        line-height: 16px;
+        text-align: center;
+        border-radius: 3px;
+        box-shadow: 4px 4px 4px #0a78aa;
+        cursor: pointer;
+      }
+
+      .fixed-btn p {
+        text-transform: uppercase;
+        font-family: arial;
+        font-weight: 900;
+        color: #fff;
+      }
+
+      .fixed-btn:active {
+        box-shadow: 0 0;
+      }
+
+      .sub-div2 {
+        text-align: center;
+        font-size: 20px;
+        font-weight: bold;
+        white-space: pre;
+        justify-content: center;
+        align-items: center;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <div class="div1">
+        <div class="sub-div1">
+          <h1 class="header">Live Weather</h1>
+        </div>
+        <div class="sub-div2">
+          <p id="result">Weather Information</p>
+        </div>
+      </div>
+      <div class="div2">
+        <div class="sub-div1">
+          <h1 align="center" class="header">Data Chart</h1>
+          <canvas id="myChart" width="600" height="300"></canvas>
+          <script>
+            // Create the chart
+            /*
+            const ctx = document.getElementById("myChart").getContext("2d");
+            var myChart = new Chart(ctx, {
+              type: "line",
+              data: {
+                labels: ["Red", "Blue", "Yellow", "Green", "Purple", "Orange"],
+                datasets: [
+                  {
+                    label: "# of Votes",
+                    data: [12, 19, 3, 5, 2, 3],
+                    backgroundColor: "rgba(255, 99, 132, 0.2)",
+                    borderColor: "rgba(255, 99, 132, 1)",
+                    borderWidth: 1,
+                  },
+                  {
+                    label: "# of Votes",
+                    data: [8, 8, 7, 5, 4, 0],
+                    backgroundColor: "rgba(255, 99, 132, 0.2)",
+                    borderColor: "rgba(255, 99, 132, 1)",
+                    borderWidth: 1,
+                  },
+                ],
+              },
+              options: {
+                scales: {
+                  y: {
+                    beginAtZero: true,
+                  },
+                },
+              },
+            });
+            */
+          </script>
+        </div>
+      </div>
+    </div>
+    <div onclick="goBack()" class="fixed-btn">
+      <p>back</p>
+    </div>
+    <script src="weather.js"></script>
+  </body>
+</html>
