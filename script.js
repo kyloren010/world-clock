@@ -45,7 +45,7 @@
         // function call
         e.addEventListener("dblclick", function () {
             console.log("Double Click!")
-            window.open(`https://kyloren010.github.io/world-clock/Buffer.html?country=${e.id}`)
+            window.open(`http://127.0.0.1:5500/BufferCarousel.html?country=${e.id}`)
             window.close();
         })
     })

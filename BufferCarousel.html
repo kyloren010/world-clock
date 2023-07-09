@@ -18,33 +18,43 @@
       <button type="button" data-bs-target="#hero-carousel" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
       <button type="button" data-bs-target="#hero-carousel" data-bs-slide-to="1" aria-label="Slide 2"></button>
       <button type="button" data-bs-target="#hero-carousel" data-bs-slide-to="2" aria-label="Slide 3"></button>
+      <button type="button" data-bs-target="#hero-carousel" data-bs-slide-to="3" aria-label="Slide 4"></button>
     </div>
 
     <div class="carousel-inner">
       <div class="carousel-item active c-item">
-        <img src="https://images.unsplash.com/photo-1579033461380-adb47c3eb938?fit=crop&w=1964&q=100" class="d-block w-100 c-img" alt="Slide 1">
+        <img src="Weatherbg.jpg" class="d-block w-100 c-img" alt="Slide 1">
         <div class="carousel-caption top-0 mt-4">
-          <p class="mt-5 fs-3 text-uppercase">Discover the hidden world</p>
-          <h1 class="display-1 fw-bolder text-capitalize">The Aurora Tours</h1>
-          <button class="btn btn-primary px-4 py-2 fs-5 mt-5">Book a tour</button>
+          <p class="mt-5 fs-3 text-uppercase">Want Some Quick Weather Report</p>
+          <h1 class="display-1 fw-bolder text-capitalize">See The Live Weather</h1>
+          <button onclick="liveWeather()" class="btn btn-primary px-4 py-2 fs-5 mt-5 ">Check Weather</button>
         </div>
       </div>
       <div class="carousel-item c-item">
-        <img src="https://images.unsplash.com/photo-1516466723877-e4ec1d736c8a?fit=crop&w=2134&q=100" class="d-block w-100 c-img" alt="Slide 2">
+        <img src="country.jpg" class="d-block w-100 c-img" alt="Slide 2">
         <div class="carousel-caption top-0 mt-4">
-          <p class="text-uppercase fs-3 mt-5">The season has arrived</p>
-          <p class="display-1 fw-bolder text-capitalize">3 available tours</p>
+          <p class="text-uppercase fs-3 mt-5">Wanna Know More</p>
+          <p class="display-1 fw-bolder text-capitalize">Let's go through some more information</p>
           <button class="btn btn-primary px-4 py-2 fs-5 mt-5" data-bs-toggle="modal"
-            data-bs-target="#booking-modal">Book a tour</button>
+            data-bs-target="#booking-modal">More</button>
         </div>
       </div>
       <div class="carousel-item c-item">
-        <img src="https://images.unsplash.com/photo-1612686635542-2244ed9f8ddc?fit=crop&w=2070&q=100" class="d-block w-100 c-img" alt="Slide 3">
+        <img src="mapcountry.png" class="d-block w-100 c-img" alt="Slide 3">
         <div class="carousel-caption top-0 mt-4">
-          <p class="text-uppercase fs-3 mt-5">Destination activities</p>
-          <p class="display-1 fw-bolder text-capitalize">Go glacier hiking</p>
+          <p class="text-uppercase fs-3 mt-5">How about a quick glance at the Map</p>
+          <p class="display-1 fw-bolder text-capitalize">See The Map</p>
           <button class="btn btn-primary px-4 py-2 fs-5 mt-5" data-bs-toggle="modal"
-            data-bs-target="#booking-modal">Book a tour</button>
+            data-bs-target="#booking-modal">Map</button>
+        </div>
+      </div>
+      <div class="carousel-item c-item">
+        <img src="trip.avif" class="d-block w-100 c-img" alt="Slide 4">
+        <div class="carousel-caption top-0 mt-4">
+          <p class="text-uppercase fs-3 mt-5">Wanna Make a Trip</p>
+          <p class="display-1 fw-bolder text-capitalize">Book a Trip</p>
+          <button class="btn btn-primary px-4 py-2 fs-5 mt-5" data-bs-toggle="modal"
+            data-bs-target="#booking-modal">Trip</button>
         </div>
       </div>
     </div>
@@ -58,4 +68,13 @@
     </button>
   </div>
 </body>
+
+<script>
+    // console.log(window.location.href);
+
+    function liveWeather() {
+        var modifiedString = window.location.href.replace(/.*=/, '')
+        window.open(`https://kyloren010.github.io/world-clock/Weather.html?country=${modifiedString}`)
+    }
+</script>
 </html>
