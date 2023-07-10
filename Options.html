@@ -107,6 +107,7 @@
             </p>
             <p class="display-1 fw-bolder text-capitalize">See The Map</p>
             <button
+              onclick="map()"
               class="btn btn-primary px-4 py-2 fs-5 mt-5"
               data-bs-toggle="modal"
               data-bs-target="#booking-modal"
@@ -121,6 +122,7 @@
             <p class="text-uppercase fs-3 mt-5">Wanna Make a Trip</p>
             <p class="display-1 fw-bolder text-capitalize">Book a Trip</p>
             <button
+              onclick="travel()"
               class="btn btn-primary px-4 py-2 fs-5 mt-5"
               data-bs-toggle="modal"
               data-bs-target="#booking-modal"
@@ -131,7 +133,7 @@
         </div>
       </div>
 
-      <div style="z-index: 9999;" onclick="goBack()" class="fixed-btn">
+      <div style="z-index: 9999" onclick="goBack()" class="fixed-btn">
         <p>back</p>
       </div>
 
@@ -170,6 +172,19 @@
     function info() {
       var modifiedString = window.location.href.replace(/.*=/, "");
       window.open(`https://en.wikipedia.org/wiki/${modifiedString}`);
+    }
+
+    function map() {
+      var modifiedString = window.location.href.replace(/.*=/, "");
+      window.open(`https://www.google.com/maps/place/${modifiedString}`);
+    }
+
+    function travel() {
+      var modifiedString = window.location.href.replace(/.*=/, "");
+      window.open(
+        `http://127.0.0.1:5500/WhereToGo.html?country=${modifiedString}`
+      );
+      window.close();
     }
 
     function goBack() {

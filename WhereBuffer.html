@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+fzT"
+      crossorigin="anonymous"
+    />
+    <script
+      defer
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-u1OknCvxWvY5kfmNBILK2hRnQC3Pr17a+RTT6rIHI7NnikvbZlHgTPOOmMi466C8"
+      crossorigin="anonymous"
+    ></script>
+
+    <link rel="stylesheet" href="styles.css" />
+
+    <title>Bootstrap 5 Carousel Slider</title>
+  </head>
+
+  <body>
+    <!-- <div style="display: block">
+    <a href="index.html" id="go-back-button">
+      <img src="goback.jpg" alt="Back Icon">
+      Go Back
+    </a>
+  </div> -->
+    <div id="hero-carousel" class="carousel slide" data-bs-ride="carousel">
+      <div class="carousel-indicators">
+        <button
+          type="button"
+          data-bs-target="#hero-carousel"
+          data-bs-slide-to="0"
+          class="active"
+          aria-current="true"
+          aria-label="Slide 1"
+        ></button>
+        <button
+          type="button"
+          data-bs-target="#hero-carousel"
+          data-bs-slide-to="1"
+          aria-label="Slide 2"
+        ></button>
+        <button
+          type="button"
+          data-bs-target="#hero-carousel"
+          data-bs-slide-to="2"
+          aria-label="Slide 3"
+        ></button>
+        <button
+          type="button"
+          data-bs-target="#hero-carousel"
+          data-bs-slide-to="3"
+          aria-label="Slide 4"
+        ></button>
+      </div>
+
+      <div class="carousel-inner">
+        <div class="carousel-item active c-item">
+          <img src="land.jpg" class="d-block w-100 c-img" alt="Slide 1" />
+          <div class="carousel-caption top-0 mt-4">
+            <p class="mt-5 fs-3 text-uppercase">Don't Know where to visit</p>
+            <h1 class="display-1 fw-bolder text-capitalize">
+              See nereby Landmarks
+            </h1>
+            <button
+              onclick="getLandmarks()"
+              class="btn btn-primary px-4 py-2 fs-5 mt-5"
+            >
+              Landmarks
+            </button>
+          </div>
+        </div>
+        <div class="carousel-item c-item">
+          <img src="Hotel.jpg" class="d-block w-100 c-img" alt="Slide 2" />
+          <div class="carousel-caption top-0 mt-4">
+            <p class="text-uppercase fs-3 mt-5">But where to stay</p>
+            <p class="display-1 fw-bolder text-capitalize">
+              Let's go through the Hotels
+            </p>
+            <button
+              onclick="getHotel()"
+              class="btn btn-primary px-4 py-2 fs-5 mt-5"
+              data-bs-toggle="modal"
+              data-bs-target="#booking-modal"
+            >
+              Hotels
+            </button>
+          </div>
+        </div>
+        <div class="carousel-item c-item">
+          <img src="Food.jpg" class="d-block w-100 c-img" alt="Slide 3" />
+          <div class="carousel-caption top-0 mt-4">
+            <p class="text-uppercase fs-3 mt-5">Hungry For More</p>
+            <p class="display-1 fw-bolder text-capitalize">
+              See The Local Food Joints
+            </p>
+            <button
+              onclick="getFood()"
+              class="btn btn-primary px-4 py-2 fs-5 mt-5"
+              data-bs-toggle="modal"
+              data-bs-target="#booking-modal"
+            >
+              Food
+            </button>
+          </div>
+        </div>
+        <div class="carousel-item c-item">
+          <img src="Trip.jpg" class="d-block w-100 c-img" alt="Slide 4" />
+          <div class="carousel-caption top-0 mt-4">
+            <p class="text-uppercase fs-3 mt-5">Time to Fly Away</p>
+            <p class="display-1 fw-bolder text-capitalize">Book A Trip</p>
+            <button
+              onclick="book()"
+              class="btn btn-primary px-4 py-2 fs-5 mt-5"
+              data-bs-toggle="modal"
+              data-bs-target="#booking-modal"
+            >
+              Book
+            </button>
+          </div>
+        </div>
+      </div>
+
+      <div style="z-index: 9999" onclick="goBack()" class="fixed-btn">
+        <p>back</p>
+      </div>
+
+      <button
+        class="carousel-control-prev"
+        type="button"
+        data-bs-target="#hero-carousel"
+        data-bs-slide="prev"
+      >
+        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Previous</span>
+      </button>
+      <button
+        class="carousel-control-next"
+        type="button"
+        data-bs-target="#hero-carousel"
+        data-bs-slide="next"
+      >
+        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Next</span>
+      </button>
+    </div>
+  </body>
+
+  <script>
+    // console.log(window.location.href);
+
+    function getLandmarks() {
+      var modifiedString = window.location.href.replace(/.*=/, "");
+      window.open(
+        `https://www.google.com/maps/search/Tourist+Spots+in+${modifiedString}`
+      );
+    }
+
+    function getFood() {
+      var modifiedString = window.location.href.replace(/.*=/, "");
+      window.open(
+        `https://www.google.com/maps/search/Restaurants+in+${modifiedString}`
+      );
+    }
+
+    function getHotel() {
+      var modifiedString = window.location.href.replace(/.*?=/, "");
+      modifiedString = modifiedString.replace(/\?.*/, "");
+      window.open(
+        `http://127.0.0.1:5500/HotelFrame.html?country=${modifiedString}?place=${window.location.href.replace(
+          /.*=/,
+          ""
+        )}`
+      );
+      window.close();
+    }
+
+    function book() {
+      var modifiedString = window.location.href.replace(/.*?=/, "");
+      modifiedString = modifiedString.replace(/\?.*/, "");
+      window.open(
+        `http://127.0.0.1:5500/BookFrame.html?country=${modifiedString}?place=${window.location.href.replace(
+          /.*=/,
+          ""
+        )}`
+      );
+      window.close();
+    }
+
+    function goBack() {
+      var modifiedString = window.location.href.replace(/.*?=/, "");
+      modifiedString = modifiedString.replace(/\?.*/, "");
+
+      window.open(
+        `http://127.0.0.1:5500/WhereToGo.html?country=${modifiedString}`
+      );
+      window.close();
+    }
+  </script>
+</html>

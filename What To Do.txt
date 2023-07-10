@@ -1,8 +1,4 @@
-Go back done
-Wiki done
-Google Map done(Too Much Done)
-Chart done 
-Dynamic Background (Later)
-
-
-Travel(WTF am I gonna do about this one !!)
+Page Frame (Hotel, Booking)
+Map (Half Done)
+Landmark
+Food
