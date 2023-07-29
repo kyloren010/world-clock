@@ -2,3 +2,7 @@ Page Frame (Hotel, Booking)
 Map (Half Done)
 Landmark
 Food
+
+
+Name : TourCompass
+Tagline : Your very own Trip Planner
