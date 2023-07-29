@@ -23,7 +23,7 @@
 
     #name {
         position: absolute;
-        background-color: rgb(255, 255, 255);
+        background-color: rgb(250, 250, 250);
         width: fit-content;
         opacity: 0;
         border-radius: 5px;
@@ -35,9 +35,35 @@
 
 
     #timeCont {
-        background-color: white;
+        background-color: rgb(255, 255, 255);
         width: fit-content;
         font-size: 1.5rem;
+        padding: 5px 5px;
+        border-radius: 5px;
+        border: 3px solid rgb(245, 128, 128);
+    }
+
+    #timeCont1 {
+        position: fixed;
+        bottom: 2%;
+        left: 43%;
+        text-align: center;
+        background-color: rgb(255, 255, 255);
+        width: fit-content;
+        font-size: 1.5rem;
+        padding: 5px 5px;
+        border-radius: 5px;
+        border: 3px solid rgb(245, 128, 128);
+    }
+
+    #timeCont2 {
+        position: fixed;
+        bottom: 91%;
+        right: 1%;
+        text-align: center;
+        background-color: rgb(255, 255, 255);
+        width: fit-content;
+        font-size: 1.2rem;
         padding: 5px 5px;
         border-radius: 5px;
         border: 3px solid rgb(245, 128, 128);
@@ -61,6 +87,14 @@
 
     <div id="timeCont">
         <p id="time">Time</p>
+    </div>
+
+    <div id="timeCont1">
+        <p id="text">Single Click to see Live Time <br> Double Click for further information</p>
+    </div>
+
+    <div id="timeCont2">
+        <p id="text">Hi there, Fellow Traveler !! <br> Ready for another ADVENTURE ??</p>
     </div>
 
     <svg id="allSvg" baseprofile="tiny" fill="#ececec" stroke="black" stroke-linecap="round" stroke-linejoin="round"
