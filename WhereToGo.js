@@ -12,7 +12,7 @@ function addDropdownItem(text) {
 }
 
 function goBack() {
-  window.open(`http://127.0.0.1:5500/Options.html?country=${country}`);
+  window.open(`https://kyloren010.github.io/world-clock/Options.html?country=${country}`);
   window.close();
 }
 
